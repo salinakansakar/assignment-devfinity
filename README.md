@@ -10,19 +10,13 @@ This project recreates the provided landing page using semantic HTML, CSS, and J
 
 - HTML5
 - CSS3
-- CSS Flexbox
-- CSS Grid
-- CSS `clip-path`
 
 ## Project Structure
 
-.
 ├── index.html
 ├── README.md
 ├── css/
 │   └── style.css
-├── js/
-│   └── script.js
 └── assets/
     ├── images/
     └── icons/
