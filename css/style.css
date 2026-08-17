@@ -16,6 +16,7 @@ body {
   color: #000000;
   font-size: 1.25rem;
   font-weight: 400;
+  overflow-wrap: break-word;
 }
 
 img {
@@ -23,7 +24,7 @@ img {
   max-width: 100%;
 }
 
-button {
+.btn {
   padding: 0.85rem 1.7rem;
   border-radius: 2rem;
   background: #f5c400;
@@ -32,6 +33,8 @@ button {
   cursor: pointer;
   font-size: 1.25rem;
   font-weight: 600;
+  display: inline-block;
+  text-decoration: none;
 }
 
 /* MAIN CONTAINER */
@@ -47,7 +50,7 @@ button {
   position: absolute;
   inset: 0;
   background: url("../assets/images/background.svg") top right / cover no-repeat;
-  opacity: 0.4;
+  opacity: 0.3;
   z-index: 0;
 }
 
@@ -239,4 +242,8 @@ button {
   height: 100%;
   object-fit: cover;
   object-position: center;
+}
+
+.hero__image--secondary {
+  display: none;
 }

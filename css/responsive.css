@@ -4,7 +4,7 @@
     font-size: 2.5rem;
   }
   .hero__description,
-  button {
+  .btn {
     font-size: 1rem;
   }
   .hero__description {
@@ -27,7 +27,7 @@
     font-size: 2rem;
   }
   .hero__description,
-  button {
+  .btn {
     font-size: 0.875rem;
   }
   .hero__description {
@@ -44,7 +44,7 @@
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
   }
-  button {
+  .btn {
     padding: 0.75rem 1rem;
   }
   .hero__markers > img:nth-last-child(-n + 2) {
@@ -55,6 +55,10 @@
   }
 }
 @media (max-width: 1300px) {
+  .hero__image--secondary {
+    display: block;
+    padding-top: 2rem;
+  }
   .hero__subimage,
   .hero__markers,
   .horizontal__line {
@@ -65,14 +69,15 @@
   .hero__card--inner {
     max-width: 100%;
   }
-  .hero__image {
-    all: unset;
+  .hero__image,
+  .hero__card--description br {
+    display: none;
   }
   .hero__image img  {
     position: relative;
   }
   .hero__container--inner {
-    padding-top: 2rem;
+    padding-top: 0;
   }
   .hero__content--card {
     clip-path: unset;
@@ -91,5 +96,10 @@
   }
   .hero__description {
     padding-top: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .hero__description {
+    line-height: 1.5rem;
   }
 }
