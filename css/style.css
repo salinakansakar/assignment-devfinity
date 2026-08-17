@@ -38,8 +38,8 @@ button {
 .hero {
   position: relative;
   overflow: hidden;
-  min-height: 100vh;
   padding: 4.44rem 1rem 9.69rem;
+  z-index: 0;
 }
 
 .hero::before {
@@ -50,6 +50,44 @@ button {
   opacity: 0.4;
   z-index: 0;
 }
+
+.horizontal__line {
+  position: absolute;
+  inset: 0;
+  z-index: 999;
+  pointer-events: none;
+}
+
+.horizontal__line:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 47.5%;
+  width: 12.5rem;
+  height: 100%;
+  background: #ffffff;
+  transform: skewX(-25deg);
+  transform-origin: top;
+  opacity: 0.1;
+}
+
+.horizontal__line--secondary {
+  left: 75%;
+}
+
+.horizontal__line--tertiary {
+  left: 90%;
+}
+
+.horizontal__line--primary {
+  transform: skewX(40deg);
+  z-index: 0;
+  left: 67%;
+}
+
+.horizontal__line--primary:before {
+  background: linear-gradient(0deg, #476480 0%, #F94216 100%);
+} 
 
 .hero__container {
   position: relative;
@@ -106,6 +144,22 @@ button {
   margin-top: 1rem;
 }
 
+.hero__card--content:nth-child(5n + 2) {
+  background: linear-gradient(97.26deg, #F94216 17.58%, #476480 60.69%);
+}
+
+.hero__card--content:nth-child(5n + 3) {
+  background: linear-gradient(97.55deg, #F94216 17.66%, #476480 64.69%);
+}
+
+.hero__card--content:nth-child(5n + 4) {
+  background: linear-gradient(98.57deg, #F94216 19.36%, #476480 74.94%);
+}
+
+.hero__card--content:nth-child(5n + 5) {
+  background: linear-gradient(99deg, #F94216 24.04%, #476480 94.09%);
+}
+
 .hero__card--inner:first-child {
   margin-top: 0;
 }
@@ -113,7 +167,7 @@ button {
 .hero__card--inner {
   max-width: 34%;
   margin-left: auto;
-  margin-right: 9%;
+  margin-right: 6%;
 }
 
 .hero__card--title {
@@ -133,4 +187,37 @@ button {
 
 .hero__card--cta {
   margin-top: 1.25rem;
+}
+
+.hero__markers > img {
+  padding-top: 6.19rem;
+}
+
+.hero__markers > img:first-child {
+  padding-top: 0;
+}
+
+.hero__image {
+  position: absolute;
+  left: 0;
+  margin-top: 9.625rem;
+  clip-path: polygon(
+    0 0,
+    50% 0,
+    100% 100%,
+    0 100%
+  );
+}
+
+.hero__subimage {
+  position: absolute;
+  top: 0;
+  left: 4.7rem;
+  z-index: 9;
+  clip-path: polygon(
+    65% 0,
+    100% 0,
+    100% 100%,
+    0 100%
+  );
 }
