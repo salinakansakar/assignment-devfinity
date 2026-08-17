@@ -1,20 +1,136 @@
+/* RESET */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
+  font-size: 16px;
 }
 
 body {
-    font-family: "Montserrat", sans-serif;
-    background: #ffffff;
-    color: #000000;
+  font-family: "Montserrat", sans-serif;
+  background: #ffffff;
+  color: #000000;
+  font-size: 1.25rem;
+  font-weight: 400;
 }
 
 img {
-    display: block;
-    max-width: 100%;
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  padding: 0.85rem 1.7rem;
+  border-radius: 2rem;
+  background: #f5c400;
+  color: #302F31;
+  border: none;
+  cursor: pointer;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+/* MAIN CONTAINER */
+.hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  padding: 4.44rem 1rem 9.69rem;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../assets/images/background.svg") top right / cover no-repeat;
+  opacity: 0.4;
+  z-index: 0;
+}
+
+.hero__container {
+  position: relative;
+  z-index: 1;
+  max-width: 1560px;
+  margin: 0 auto;
+}
+
+.hero__container--inner {
+  display: flex;
+  gap: 9.25rem;
+}
+
+.hero__content {
+  max-width: 87.2%;
+  margin-left: auto;
+}
+
+.hero__content--inner {
+  max-width: 40%;
+  margin-left: auto;
+}
+
+.hero__title {
+  font-weight: 300;
+  font-size: 3rem;
+  background: linear-gradient(90deg, #466481, #BA0C2F);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hero__description {
+  font-weight: 400;
+  font-size: 1.25rem;
+  padding-top: 3.125rem;
+  line-height: 2rem;
+}
+
+.hero__content--card {
+  padding-top: 2.25rem;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    50% 100%
+  );
+}
+
+.hero__card--content {
+  min-height: 21rem;
+  background: linear-gradient(95.89deg, #F94216 14.58%, #476480 51.56%);
+  padding-top: 4rem;
+  margin-top: 1rem;
+}
+
+.hero__card--inner:first-child {
+  margin-top: 0;
+}
+
+.hero__card--inner {
+  max-width: 34%;
+  margin-left: auto;
+  margin-right: 9%;
+}
+
+.hero__card--title {
+  font-weight: 700;
+  color: #A6C9E7;
+  text-transform: uppercase;
+  letter-spacing: 0.08rem;
+  font-size: 2.25rem;
+}
+
+.hero__card--description {
+  font-weight: 400;
+  font-size: 2rem;
+  padding-top: 1.25rem;
+  color: #ffffff;
+}
+
+.hero__card--cta {
+  margin-top: 1.25rem;
 }
